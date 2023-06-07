@@ -56,5 +56,27 @@ print(tuples)
 t = (1, 2)
 print(t)
 # 如果要定义一个空的tuple，可以写成()：
-t = ()
+# 注意：！！定义的不是tuple，是1这个数！这是因为括号()既可以表示tuple，又可以表示数学公式中的小括号，这就产生了歧义，因此，Python规定，这种情况下，按小括号进行计算，计算结果自然是1。
+t = (1)
 print(t)
+t = (1,)
+print(t)
+# “可变的”tuple：“指向不变”
+t = ('a', 'b', ['A', 'B'])
+t[2][0] = 'X'
+t[2][1] = 'Y'
+print(t)
+
+# 练习
+# 请用索引取出下面list的指定元素：
+L = [
+    ['Apple', 'Google', 'Microsoft'],
+    ['Java', 'Python', 'Ruby', 'PHP'],
+    ['Adam', 'Bart', 'Lisa']
+]
+# 打印Apple:
+print(L[0][0])
+# 打印Python:
+print(L[1][1])
+# 打印Lisa:
+print(L[2][2])
